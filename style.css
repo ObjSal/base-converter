@@ -10,7 +10,7 @@ body {
 }
 
 textarea {
-    font-size: 1.5em;
+    font-size: 1em;
     color: lawngreen;
     resize: none;
     width: 100%;
@@ -54,26 +54,26 @@ button:focus {
 
 #container {
     margin: auto;
-    width: 90%;
-    height: 100vh;
+    width: 80%;
+    height: 80vh;
 }
 
 #inputDiv {
     padding-top: 1.4em;
-    padding-bottom: 0.7em;
+    padding-bottom: 2em;
     border: 0;
 }
 
 #resultDiv {
-    padding-top: -1.4em;
-    padding-bottom: 1.4em;
+    padding-top: -2em;
+    padding-bottom: 3em;
     border: 0;
     pointer-events: none;
 }
 
 #buttonsDiv {
-    height: 1.4em;
-    margin: -0.7em 0 0 0;
+    height: 4em;
+    margin: -2em 0 0 0;
     width: 100%;
     display: flex;
     /* didn't work: flex-direction: column;*/
@@ -97,7 +97,7 @@ button:focus {
     font-size: 0.5em;
     display:inline-block;
     width: 100%;
-    margin: -2.8em 0 0 0;
+    margin: -5.8em 0 0 0;
     padding: 0.2em 0 0 0.2em;
     border: 0;
     vertical-align: center;
@@ -111,7 +111,10 @@ button:focus {
     #container {
         width: 95%;
     }
-    textarea {
-        font-size: 1em;
+}
+
+@media screen and (max-height: 600px) {
+    #container {
+        height: 95vh;
     }
 }
