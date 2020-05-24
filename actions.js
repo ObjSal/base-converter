@@ -1,3 +1,5 @@
+// Author: Salvador Guerrero
+
 'use strict'
 
 let inputTextArea = document.getElementById('inputTextArea')
