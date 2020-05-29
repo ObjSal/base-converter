@@ -5,11 +5,11 @@
 let footerDiv = document.getElementById('footer')
 
 function getCount() {
-  const urlParams = new URLSearchParams(window.location.search)
-  if (!urlParams) return
-  const counterParam = urlParams.get('counter')
-  if (!counterParam) return
-  fetch('https://byteapps.sytes.net/analytics/counter/base64').then(response => {
+  // const urlParams = new URLSearchParams(window.location.search)
+  // if (!urlParams) return
+  // const counterParam = urlParams.get('counter')
+  // if (!counterParam) return
+  fetch('https://byteapps.sytes.net/analytics/counter?k=base64').then(response => {
     if (response.status !== 200) return
     (async() => {
       try {
