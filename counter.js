@@ -9,7 +9,7 @@ function getCount() {
   // if (!urlParams) return
   // const counterParam = urlParams.get('counter')
   // if (!counterParam) return
-  fetch('https://byteapps.sytes.net/analytics/counter?k=base64').then(response => {
+  fetch('https://byteapps.sytes.net/analytics/counter?k=base-encoder').then(response => {
     if (response.status !== 200) return
     (async() => {
       try {

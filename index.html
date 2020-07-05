@@ -4,21 +4,41 @@
 <!--suppress HtmlFormInputWithoutLabel -->
 <html lang="en">
 <head>
-    <title>Base64 Encode &#x21c4; Decode</title>
+    <title>Base Encoder & Decoder</title>
     <script type="application/javascript" src="actions.js" defer></script>
     <script type="application/javascript" src="counter.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 <div id="container">
-<div id="header" class="textStyle">Base64 Encode &#x21c4; Decode</div>
+<div id="header" class="textStyle">Base Encoder & Decoder</div>
+<div class="textStyle"><p>
+Not a typical char by char conversion.<br>
+Uses a modified base64 algorithm to encode ascii to and from various numerical bases.<br>
+</p></div>
 <div id="inputDiv" class="largeTextDiv"><textarea id="inputTextArea" class="textStyle" placeholder="Paste text here..." cols="0" rows="0"></textarea></div>
 <div id="buttonsDiv">
-    <button id="encodeButton" class="textStyle" title="Base64 Encode">Encode</button>
+    <button id="encodeButton" class="textStyle" title="Encode">Encode</button>
     <div class="verticalLine"></div>
-    <button id="decodeButton" class="textStyle" title="Base 64 Decode">Decode</button>
+    <div class="verticalStack">
+        <label class="textStyle smallLabel" for="encodingSelect">Select Encoding</label>
+        <select class="smallInput" id="encodingSelect" name="Hash">
+            <option value="base2">Base 2</option>
+            <option value="base8">Base 8</option>
+            <option value="base10">Base 10 (Experimental)</option>
+            <option value="base16">Base 16</option>
+            <option value="base58">Base 58 (Experimental)</option>
+            <option value="base64" selected="selected">Base 64</option>
+        </select>
+    </div>
+    <div class="verticalLine"></div>
+    <button id="decodeButton" class="textStyle" title="Decode">Decode</button>
 </div>
 <div id="resultDiv" class="largeTextDiv"><textarea id="resultTextArea" class="textStyle" placeholder="Paste something in the above text area and click a button..." cols="0" rows="0" readonly></textarea></div>
+<div class="textStyle bottomText"><p>
+Base58 encoding output/input is not compatible with base58check.<br>
+Algorithm can easily be adapted for binary input/output.
+</p></div>
 <div id="footer" class="textStyle">Created by Salvador Guerrero</div>
 </div>
 </body>
